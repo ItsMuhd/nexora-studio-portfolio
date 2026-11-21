@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services | NEXORA STUDIO</title>
+<meta name="description" content="Explore the digital development and creative services offered by NEXORA STUDIO.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+    --navy: #171a35;
+    --purple: #8060cf;
+    --gold: #e9bd76;
+    --blue: #68b5ed;
+    --muted: #b9bbcf;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, 88%);
+    margin: auto;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 420px;
+    height: 420px;
+    filter: blur(160px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::before {
+    background: #8060cf;
+    opacity: .16;
+    top: 100px;
+    left: -180px;
+}
+
+body::after {
+    background: #e9bd76;
+    opacity: .10;
+    bottom: 0;
+    right: -180px;
+}
+
+/* NAVIGATION */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(23,26,53,.94);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* GENERAL */
+
+.gradient {
+    background: linear-gradient(100deg, #f0c879, #bd8bff, #73baff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    background: rgba(233,189,118,.09);
+    border: 1px solid rgba(233,189,118,.3);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: linear-gradient(110deg, #e9bd76, #c998e9);
+    color: #171a35;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(201,152,233,.25);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.2);
+    color: white;
+}
+
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+    padding: 110px 0 85px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(40px, 7vw, 76px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -2px;
+    margin: 28px auto 22px;
+    max-width: 900px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* SERVICES */
+
+.services {
+    padding: 70px 0 105px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 48px;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(30px, 5vw, 46px);
+    margin: 17px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+}
+
+.service-card {
+    padding: 33px 29px;
+    min-height: 290px;
+    border-radius: 23px;
+    background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025));
+    border: 1px solid rgba(255,255,255,.1);
+    transition: .35s;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: var(--card-glow, #8060cf);
+    filter: blur(90px);
+    opacity: .25;
+    right: -45px;
+    bottom: -45px;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(233,189,118,.45);
+}
+
+.service-icon {
+    width: 61px;
+    height: 61px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px;
+    font-size: 24px;
+    background: linear-gradient(135deg, #8060cf, #bd8bff);
+    margin-bottom: 26px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card:nth-child(2) .service-icon,
+.service-card:nth-child(5) .service-icon {
+    background: linear-gradient(135deg, #bd8b63, #e9bd76);
+}
+
+.service-card:nth-child(3) .service-icon,
+.service-card:nth-child(6) .service-icon {
+    background: linear-gradient(135deg, #397fc2, #73baff);
+}
+
+.service-card h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    margin-bottom: 13px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card p {
+    color: var(--muted);
+    line-height: 1.85;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+/* PROCESS */
+
+.process {
+    padding: 95px 0;
+    background: rgba(255,255,255,.025);
+    border-top: 1px solid rgba(255,255,255,.06);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.process-number {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #8060cf, #bd8bff);
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.process-card:nth-child(2) .process-number {
+    background: linear-gradient(135deg, #bd8b63, #e9bd76);
+}
+
+.process-card:nth-child(3) .process-number {
+    background: linear-gradient(135deg, #397fc2, #73baff);
+}
+
+.process-card:nth-child(4) .process-number {
+    background: linear-gradient(135deg, #a45b9d, #e28bc1);
+}
+
+.process-card h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+/* WHY NEXORA */
+
+.why {
+    padding: 100px 0;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.why-copy h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(31px, 4vw, 44px);
+    line-height: 1.25;
+    margin: 18px 0;
+}
+
+.why-copy p {
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.why-list {
+    display: grid;
+    gap: 16px;
+}
+
+.why-item {
+    padding: 19px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.why-item i {
+    color: var(--gold);
+    font-size: 20px;
+}
+
+.why-item span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* CTA */
+
+.cta {
+    padding: 80px 0 100px;
+    text-align: center;
+}
+
+.cta-box {
+    padding: 65px 25px;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(189,139,255,.2), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(233,189,118,.16), transparent 40%),
+        linear-gradient(120deg, #37335d, #333b61);
+    border: 1px solid rgba(255,255,255,.13);
+}
+
+.cta-box h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(30px, 5vw, 46px);
+    margin: 18px 0;
+}
+
+.cta-box p {
+    color: var(--muted);
+    max-width: 550px;
+    margin: 0 auto 28px;
+    line-height: 1.9;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 42px 0 25px;
+    background: rgba(0,0,0,.15);
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 27px;
+}
+
+.footer-brand {
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.footer-brand span {
+    color: var(--gold);
+}
+
+.footer-top p,
+.footer-bottom {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.footer-bottom {
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.signature {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
+@media(max-width: 700px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        padding: 25px 6%;
+        background: #202342;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 85px 0 65px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .services {
+        padding-top: 55px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 450px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+
+        <a href="../index.html" class="logo">
+            NEXORA<span>STUDIO</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="container">
+
+            <span class="tag">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                WHAT I CAN HELP CREATE
+            </span>
+
+            <h1>
+                Turning Ideas Into<br>
+                <span class="gradient">Digital Experiences.</span>
+            </h1>
+
+            <p>
+                Discover the creative and development services
+                available through NEXORA STUDIO. From website
+                creation to digital experiences, every idea
+                deserves thoughtful execution.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">
+                    Explore Services <i class="fas fa-arrow-down"></i>
+                </a>
+
+                <a href="contact.html" class="btn btn-outline">
+                    Discuss a Project
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICE CARDS -->
+
+    <section class="services" id="services">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">MY SERVICES</span>
+                <h2>Creative Solutions.<br><span class="gradient">Digital Possibilities.</span></h2>
+                <p>
+                    A selection of development and creative areas
+                    I explore and work with.
+                </p>
+            </div>
+
+            <div class="service-grid">
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>
+                        Building responsive websites with structured
+                        layouts, useful features and modern web technologies.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Website Design</h3>
+                    <p>
+                        Creating visually engaging interfaces with
+                        thoughtful typography, colours and layouts.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-screen-button"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Designing web experiences that adapt to
+                        different screen sizes and devices.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3>Interactive Experiences</h3>
+                    <p>
+                        Adding interactive elements, animations
+                        and useful functions to websites.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Concepts</h3>
+                    <p>
+                        Exploring creative ways to integrate
+                        artificial intelligence into digital projects.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3>Website Improvement</h3>
+                    <p>
+                        Exploring layout refinements, usability
+                        improvements and website maintenance.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WORK PROCESS -->
+
+    <section class="process">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">HOW I APPROACH PROJECTS</span>
+                <h2>From Idea to <span class="gradient">Creation.</span></h2>
+                <p>
+                    A simple process for turning an idea
+                    into a thoughtfully developed digital experience.
+                </p>
+            </div>
+
+            <div class="process-grid">
+
+                <article class="process-card">
+                    <div class="process-number">01</div>
+                    <h3>Discovery</h3>
+                    <p>
+                        Understanding the idea, purpose
+                        and goals of the project.
+                    </p>
+                </article>
+
+                <article class="process-card">
+                    <div class="process-number">02</div>
+                    <h3>Planning</h3>
+                    <p>
+                        Organising the structure, features
+                        and creative direction.
+                    </p>
+                </article>
+
+                <article class="process-card">
+                    <div class="process-number">03</div>
+                    <h3>Development</h3>
+                    <p>
+                        Building the experience and
+                        bringing the planned ideas together.
+                    </p>
+                </article>
+
+                <article class="process-card">
+                    <div class="process-number">04</div>
+                    <h3>Refinement</h3>
+                    <p>
+                        Reviewing the work and improving
+                        its functionality and presentation.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY NEXORA -->
+
+    <section class="why">
+        <div class="container why-grid">
+
+            <div class="why-copy">
+                <span class="section-label">THE NEXORA APPROACH</span>
+
+                <h2>
+                    Thoughtful Work.<br>
+                    <span class="gradient">Meaningful Results.</span>
+                </h2>
+
+                <p>
+                    Great digital experiences are more than
+                    attractive screens. They should communicate
+                    clearly, work properly and serve a purpose.
+                </p>
+
+                <p>
+                    My approach combines creativity,
+                    continuous learning and attention to detail.
+                </p>
+
+                <a href="projects.html" class="btn btn-primary">
+                    See My Projects <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="why-list">
+
+                <div class="why-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Creative and thoughtful design</span>
+                </div>
+
+                <div class="why-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Responsive layouts for different devices</span>
+                </div>
+
+                <div class="why-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Attention to usability and functionality</span>
+                </div>
+
+                <div class="why-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Continuous improvement and learning</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+        <div class="container">
+
+            <div class="cta-box">
+
+                <span class="section-label">HAVE SOMETHING IN MIND?</span>
+
+                <h2>
+                    Let's Build Something<br>
+                    <span class="gradient">Worth Exploring.</span>
+                </h2>
+
+                <p>
+                    Have a website idea or a digital project
+                    you'd like to discuss? Let's start with a conversation.
+                </p>
+
+                <a href="contact.html" class="btn btn-primary">
+                    Start a Conversation
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+
+        <div class="footer-top">
+            <div>
+                <div class="footer-brand">
+                    NEXORA<span>STUDIO</span>
+                </div>
+                <p>Ideas transformed into digital experiences.</p>
+            </div>
+
+            <a href="../index.html" class="btn btn-outline">
+                Back to Home <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> NEXORA STUDIO. All rights reserved.</p>
+            <p>Created by <span class="signature">It's Muh'd 👑🖥️</span></p>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+    navLinks.classList.toggle("open");
+
+    const icon = menuToggle.querySelector("i");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-xmark");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("open");
+
+        const icon = menuToggle.querySelector("i");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-xmark");
+    });
+});
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17182e">
+
+<title>Projects | NEXORA STUDIO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --bg:#17182e;
+  --surface:#22243e;
+  --surface2:#2b2e4b;
+  --gold:#f4c879;
+  --purple:#a78bfa;
+  --blue:#75baff;
+  --pink:#f29acb;
+  --cream:#fff8ed;
+  --muted:#b9bad0;
+  --border:rgba(255,255,255,.1);
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+  background:
+    radial-gradient(circle at 10% 15%,rgba(167,139,250,.15),transparent 30%),
+    radial-gradient(circle at 90% 45%,rgba(117,186,255,.12),transparent 30%),
+    var(--bg);
+  color:var(--cream);
+  font-family:'DM Sans',sans-serif;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+}
+
+.container {
+  width:min(1160px,90%);
+  margin:auto;
+}
+
+/* NAVIGATION */
+
+nav {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(23,24,46,.91);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav-inner {
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo {
+  font-family:'Manrope',sans-serif;
+  font-size:1.25rem;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.logo span { color:var(--gold); }
+
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.nav-links a {
+  color:var(--muted);
+  font-size:.9rem;
+  transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color:var(--gold);
+}
+
+.nav-cta {
+  padding:11px 20px;
+  border-radius:30px;
+  background:linear-gradient(120deg,var(--gold),#f5a86e);
+  color:#252037 !important;
+  font-weight:800;
+}
+
+.menu-btn {
+  display:none;
+  border:0;
+  background:none;
+  color:white;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero {
+  padding:105px 0 85px;
+  text-align:center;
+  position:relative;
+}
+
+.eyebrow {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:9px 17px;
+  border:1px solid rgba(244,200,121,.3);
+  border-radius:30px;
+  color:var(--gold);
+  background:rgba(244,200,121,.07);
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.hero h1 {
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(2.6rem,7vw,5rem);
+  line-height:1.12;
+  letter-spacing:-2px;
+  margin:25px auto 20px;
+  max-width:850px;
+}
+
+.gradient-text {
+  background:linear-gradient(100deg,var(--gold),var(--pink),var(--purple),var(--blue));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero p {
+  max-width:650px;
+  margin:auto;
+  color:var(--muted);
+  font-size:1.05rem;
+}
+
+/* PROJECT INTRO */
+
+.section-heading {
+  margin-bottom:35px;
+}
+
+.section-heading .small {
+  color:var(--gold);
+  text-transform:uppercase;
+  font-size:.78rem;
+  letter-spacing:2px;
+  font-weight:800;
+}
+
+.section-heading h2 {
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(1.8rem,4vw,2.7rem);
+  margin:9px 0;
+}
+
+.section-heading p {
+  color:var(--muted);
+  max-width:600px;
+}
+
+.projects {
+  padding:30px 0 100px;
+}
+
+/* PROJECT GRID */
+
+.project-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+}
+
+/* PROJECT CARDS */
+
+.project-card {
+  background:linear-gradient(145deg,rgba(43,46,75,.95),rgba(34,36,62,.95));
+  border:1px solid var(--border);
+  border-radius:25px;
+  overflow:hidden;
+  transition:transform .35s,border-color .35s;
+}
+
+.project-card:hover {
+  transform:translateY(-8px);
+  border-color:rgba(244,200,121,.5);
+}
+
+.project-visual {
+  min-height:260px;
+  padding:25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.visual-one {
+  background:linear-gradient(135deg,#252e59,#4966a7,#7d9bd0);
+}
+
+.visual-two {
+  background:linear-gradient(135deg,#332d22,#99703d,#e3b66f);
+}
+
+.visual-three {
+  background:linear-gradient(135deg,#49336e,#a56cae,#edb2c8);
+}
+
+.visual-four {
+  background:linear-gradient(135deg,#263f56,#398d9a,#9bc9bd);
+}
+
+.visual-five {
+  background:linear-gradient(135deg,#4b3650,#a66d70,#e5ad7b);
+}
+
+/* MOCK WEBSITE PREVIEW */
+
+.mock-window {
+  width:min(100%,390px);
+  min-height:185px;
+  background:rgba(255,255,255,.94);
+  color:#24243b;
+  border-radius:14px;
+  box-shadow:0 25px 55px rgba(0,0,0,.25);
+  overflow:hidden;
+  transform:rotate(-2deg);
+  transition:transform .4s;
+}
+
+.project-card:hover .mock-window {
+  transform:rotate(0) scale(1.025);
+}
+
+.mock-top {
+  height:27px;
+  background:#e8e7ef;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  padding:0 12px;
+}
+
+.mock-top i {
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#b8b6c8;
+}
+
+.mock-content {
+  padding:20px;
+}
+
+.mock-brand {
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:1px;
+  color:#6875a7;
+}
+
+.mock-title {
+  font-family:'Manrope',sans-serif;
+  font-size:1.45rem;
+  font-weight:800;
+  line-height:1.2;
+  margin:12px 0;
+}
+
+.mock-line {
+  height:6px;
+  width:75%;
+  background:#e3e3ed;
+  border-radius:10px;
+  margin:7px 0;
+}
+
+.mock-line.short { width:48%; }
+
+.mock-button {
+  display:inline-block;
+  margin-top:13px;
+  padding:7px 14px;
+  border-radius:20px;
+  background:#596caa;
+  color:white;
+  font-size:.65rem;
+  font-weight:700;
+}
+
+.mock-orbit {
+  width:120px;
+  height:120px;
+  border:2px solid rgba(255,255,255,.55);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:3rem;
+  color:white;
+  box-shadow:0 0 35px rgba(255,255,255,.2);
+}
+
+.mock-orbit::before,
+.mock-orbit::after {
+  content:"";
+  position:absolute;
+  width:155px;
+  height:65px;
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:50%;
+  transform:rotate(35deg);
+}
+
+.mock-orbit::after {
+  transform:rotate(-35deg);
+}
+
+/* PRINTING PRESS PREVIEW */
+
+.print-preview {
+  width:min(100%,390px);
+  padding:25px 20px;
+  border-radius:15px;
+  background:linear-gradient(145deg,#fffaf0,#f0e2c9);
+  color:#30251d;
+  text-align:center;
+  box-shadow:0 25px 55px rgba(0,0,0,.28);
+  transform:rotate(-2deg);
+  transition:transform .4s;
+  position:relative;
+}
+
+.project-card:hover .print-preview {
+  transform:rotate(0) scale(1.025);
+}
+
+.print-icon {
+  width:58px;
+  height:58px;
+  border-radius:17px;
+  margin:0 auto 13px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#a16b32,#e6bc76);
+  color:white;
+  font-size:1.65rem;
+  box-shadow:0 8px 20px rgba(161,107,50,.25);
+}
+
+.print-preview h3 {
+  font-family:'Manrope',sans-serif;
+  font-size:1.35rem;
+  line-height:1.2;
+  font-weight:800;
+}
+
+.print-preview p {
+  font-size:.72rem;
+  color:#76634e;
+  margin:8px 0 14px;
+}
+
+.print-services {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.print-services span {
+  background:#e9d7b9;
+  color:#62472a;
+  padding:5px 9px;
+  border-radius:20px;
+  font-size:.62rem;
+  font-weight:700;
+}
+
+/* PROJECT INFORMATION */
+
+.project-info {
+  padding:27px;
+}
+
+.project-top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+.project-top h3 {
+  font-family:'Manrope',sans-serif;
+  font-size:1.35rem;
+}
+
+.project-number {
+  color:var(--gold);
+  font-weight:800;
+  font-size:.8rem;
+  white-space:nowrap;
+}
+
+.project-info p {
+  color:var(--muted);
+  font-size:.94rem;
+  margin-bottom:19px;
+}
+
+.tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:22px;
+}
+
+.tags span {
+  font-size:.72rem;
+  padding:6px 11px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  color:#d6d5e5;
+  background:rgba(255,255,255,.035);
+}
+
+.project-link {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--gold);
+  font-weight:800;
+  font-size:.88rem;
+  transition:.3s;
+}
+
+.project-link:hover {
+  gap:15px;
+}
+
+/* NOTE */
+
+.note {
+  margin-top:35px;
+  padding:20px 23px;
+  border:1px solid rgba(167,139,250,.25);
+  background:rgba(167,139,250,.07);
+  border-radius:16px;
+  color:var(--muted);
+  font-size:.88rem;
+}
+
+.note i {
+  color:var(--purple);
+  margin-right:8px;
+}
+
+/* CTA */
+
+.cta {
+  padding:75px 25px;
+  margin-bottom:90px;
+  border-radius:30px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(244,200,121,.23),transparent 35%),
+    linear-gradient(120deg,#34345c,#493b70,#354d71);
+  border:1px solid rgba(255,255,255,.13);
+}
+
+.cta h2 {
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(1.8rem,4vw,2.8rem);
+  margin-bottom:13px;
+}
+
+.cta p {
+  color:#e0dced;
+  max-width:570px;
+  margin:0 auto 25px;
+}
+
+.button {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 24px;
+  border-radius:30px;
+  background:linear-gradient(120deg,var(--gold),#f5a86e);
+  color:#252037;
+  font-weight:800;
+  transition:.3s;
+}
+
+.button:hover {
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(244,200,121,.2);
+}
+
+/* FOOTER */
+
+footer {
+  border-top:1px solid var(--border);
+  padding:30px 0;
+}
+
+.footer-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.footer-inner p {
+  color:var(--muted);
+  font-size:.82rem;
+}
+
+.signature {
+  color:var(--gold);
+  font-weight:800;
+}
+
+.socials {
+  display:flex;
+  gap:15px;
+}
+
+.socials a {
+  color:var(--muted);
+  transition:.3s;
+}
+
+.socials a:hover {
+  color:var(--gold);
+}
+
+/* MOBILE */
+
+@media(max-width:800px) {
+  .menu-btn { display:block; }
+
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:76px;
+    left:0;
+    width:100%;
+    padding:25px 5%;
+    background:#20213b;
+    border-bottom:1px solid var(--border);
+    flex-direction:column;
+    align-items:stretch;
+    gap:18px;
+  }
+
+  .nav-links.show { display:flex; }
+
+  .nav-cta { text-align:center; }
+
+  .project-grid { grid-template-columns:1fr; }
+
+  .hero { padding:75px 0 65px; }
+
+  .footer-inner {
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+@media(max-width:480px) {
+  .project-visual { min-height:220px; }
+  .project-info { padding:21px; }
+  .project-top h3 { font-size:1.15rem; }
+  .cta { padding:55px 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="container nav-inner">
+
+    <a href="../index.html" class="logo">
+      NEXORA<span>.</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html" class="nav-cta">
+        Let's Talk <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+  <div class="container">
+
+    <span class="eyebrow">
+      <i class="fas fa-layer-group"></i>
+      Selected Work
+    </span>
+
+    <h1>
+      Ideas turned into<br>
+      <span class="gradient-text">digital experiences.</span>
+    </h1>
+
+    <p>
+      A growing collection of web projects, creative experiments
+      and digital concepts built with curiosity, imagination and code.
+    </p>
+
+  </div>
+</header>
+
+<main>
+
+<section class="projects">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="small">The Portfolio</span>
+
+      <h2>Exploring what's possible.</h2>
+
+      <p>
+        Every project is an opportunity to learn, experiment and
+        create something better.
+      </p>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- PROJECT 01: FUTURE PILOT ACADEMY -->
+
+      <article class="project-card">
+
+        <div class="project-visual visual-one">
+
+          <div class="mock-window">
+
+            <div class="mock-top">
+              <i></i><i></i><i></i>
+            </div>
+
+            <div class="mock-content">
+
+              <div class="mock-brand">
+                FUTURE PILOT ACADEMY
+              </div>
+
+              <div class="mock-title">
+                Your journey<br>takes flight.
+              </div>
+
+              <div class="mock-line"></div>
+              <div class="mock-line short"></div>
+
+              <span class="mock-button">
+                EXPLORE ACADEMY
+              </span>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="project-info">
+
+          <div class="project-top">
+            <h3>Future Pilot Academy</h3>
+            <span class="project-number">01 / 05</span>
+          </div>
+
+          <p>
+            An aviation-focused educational website designed to
+            introduce visitors to pilot learning and aviation topics.
+          </p>
+
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Education</span>
+          </div>
+
+          <a
+            href="https://itsmuhd.github.io/Future-Pilot-Academy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            Visit Live Project
+            <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+      </article>
+
+      <!-- PROJECT 02: OSTIN REAL PRINTING PRESS -->
+
+      <article class="project-card">
+
+        <div class="project-visual visual-two">
+
+          <div class="print-preview">
+
+            <div class="print-icon">
+              <i class="fas fa-print"></i>
+            </div>
+
+            <h3>OSTIN REAL<br>PRINTING PRESS</h3>
+
+            <p>
+              PRINTING • DESIGN • CREATIVITY
+            </p>
+
+            <div class="print-services">
+              <span>Printing</span>
+              <span>Creative Design</span>
+              <span>Digital Services</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project-info">
+
+          <div class="project-top">
+            <h3>OSTIN REAL PRINTING PRESS</h3>
+            <span class="project-number">02 / 05</span>
+          </div>
+
+          <p>
+            A dedicated website project for OSTIN REAL PRINTING PRESS,
+            presenting its brand through a custom digital experience.
+          </p>
+
+          <div class="tags">
+            <span>Web Development</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Business Website</span>
+          </div>
+
+          <a
+            href="https://itsmuhd.github.io/ostin-real-printing-press/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            Visit Live Project
+            <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+      </article>
+
+      <!-- PROJECT 03: NEXORA STUDIO -->
+
+      <article class="project-card">
+
+        <div class="project-visual visual-three">
+
+          <div class="mock-window">
+
+            <div class="mock-top">
+              <i></i><i></i><i></i>
+            </div>
+
+            <div class="mock-content">
+
+              <div class="mock-brand">
+                NEXORA CREATIVE LAB
+              </div>
+
+              <div class="mock-title">
+                Design beyond<br>the ordinary.
+              </div>
+
+              <div class="mock-line"></div>
+              <div class="mock-line short"></div>
+
+              <span class="mock-button" style="background:#9b6ca7;">
+                DISCOVER MORE
+              </span>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="project-info">
+
+          <div class="project-top">
+            <h3>NEXORA STUDIO</h3>
+            <span class="project-number">03 / 05</span>
+          </div>
+
+          <p>
+            A personal digital portfolio exploring modern web design,
+            creative presentation and interactive experiences.
+          </p>
+
+          <div class="tags">
+            <span>Web Design</span>
+            <span>Frontend</span>
+            <span>Responsive UI</span>
+          </div>
+
+          <a href="../index.html" class="project-link">
+            Explore This Website
+            <i class="fas fa-arrow-right"></i>
+          </a>
+
+        </div>
+      </article>
+
+      <!-- PROJECT 04: DIGITAL EXPERIMENTS -->
+
+      <article class="project-card">
+
+        <div class="project-visual visual-four">
+
+          <div class="mock-orbit">
+            <i class="fas fa-code"></i>
+          </div>
+
+        </div>
+
+        <div class="project-info">
+
+          <div class="project-top">
+            <h3>Digital Experiments</h3>
+            <span class="project-number">04 / 05</span>
+          </div>
+
+          <p>
+            A collection of experimental interface ideas, interactive
+            concepts and creative coding explorations.
+          </p>
+
+          <div class="tags">
+            <span>JavaScript</span>
+            <span>Prototyping</span>
+            <span>Creative Coding</span>
+          </div>
+
+          <a href="contact.html" class="project-link">
+            Discuss an Idea
+            <i class="fas fa-arrow-right"></i>
+          </a>
+
+        </div>
+      </article>
+
+      <!-- PROJECT 05: LEARNING CONCEPTS -->
+
+      <article class="project-card">
+
+        <div class="project-visual visual-five">
+
+          <div class="mock-window">
+
+            <div class="mock-top">
+              <i></i><i></i><i></i>
+            </div>
+
+            <div class="mock-content">
+
+              <div class="mock-brand">
+                LEARNING & DEVELOPMENT
+              </div>
+
+              <div class="mock-title">
+                Build. Learn.<br>Improve.
+              </div>
+
+              <div class="mock-line"></div>
+              <div class="mock-line short"></div>
+
+              <span class="mock-button" style="background:#a36d75;">
+                COMING TO LIFE
+              </span>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="project-info">
+
+          <div class="project-top">
+            <h3>Learning Concepts</h3>
+            <span class="project-number">05 / 05</span>
+          </div>
+
+          <p>
+            An evolving space for educational website ideas and
+            digital learning concepts, developed through experimentation.
+          </p>
+
+          <div class="tags">
+            <span>Education</span>
+            <span>Web Concepts</span>
+            <span>Learning</span>
+          </div>
+
+          <a href="contact.html" class="project-link">
+            Get in Touch
+            <i class="fas fa-arrow-right"></i>
+          </a>
+
+        </div>
+      </article>
+
+    </div>
+
+    <div class="note">
+      <i class="fas fa-circle-info"></i>
+
+      Some visuals on this page are illustrative previews rather than
+      actual project screenshots. The portfolio will grow as more
+      completed work is added.
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+
+<section class="container">
+
+  <div class="cta">
+
+    <h2>Have an idea worth building?</h2>
+
+    <p>
+      Let's turn your next digital idea into something meaningful,
+      functional and memorable.
+    </p>
+
+    <a href="contact.html" class="button">
+      Start a Conversation
+      <i class="fas fa-arrow-right"></i>
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <p>
+      © <span id="year"></span> NEXORA STUDIO. All rights reserved.
+    </p>
+
+    <p class="signature">
+      It's Muh'd 👑🖥️
+    </p>
+
+    <div class="socials">
+
+      <a
+        href="https://github.com/itsmuhd"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+menuBtn.addEventListener('click', () => {
+
+  navLinks.classList.toggle('show');
+
+  const icon = menuBtn.querySelector('i');
+
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-xmark');
+
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+  link.addEventListener('click', () => {
+
+    navLinks.classList.remove('show');
+
+    const icon = menuBtn.querySelector('i');
+
+    icon.classList.add('fa-bars');
+    icon.classList.remove('fa-xmark');
+
+  });
+
+});
+
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17182e">
+
+<title>Contact | NEXORA STUDIO</title>
+<meta name="description" content="Contact Muh'd at NEXORA STUDIO for website development, creative projects and collaborations.">
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --bg:#17182e;
+  --surface:#22243e;
+  --surface2:#2d304e;
+  --gold:#f4c879;
+  --purple:#ad91ff;
+  --blue:#79c0ff;
+  --pink:#f39bc9;
+  --cream:#fff8ed;
+  --muted:#b9bad0;
+  --border:rgba(255,255,255,.1);
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:'DM Sans',sans-serif;
+  color:var(--cream);
+  line-height:1.7;
+  overflow-x:hidden;
+  background:
+    radial-gradient(circle at 10% 15%,rgba(173,145,255,.16),transparent 30%),
+    radial-gradient(circle at 90% 50%,rgba(121,192,255,.13),transparent 30%),
+    var(--bg);
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+}
+
+.container {
+  width:min(1160px,90%);
+  margin:auto;
+}
+
+/* NAVIGATION */
+
+nav {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(23,24,46,.92);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav-inner {
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo {
+  font-family:'Manrope',sans-serif;
+  font-size:1.25rem;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.logo span { color:var(--gold); }
+
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.nav-links a {
+  color:var(--muted);
+  font-size:.9rem;
+  transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color:var(--gold);
+}
+
+.nav-cta {
+  padding:11px 20px;
+  border-radius:30px;
+  background:linear-gradient(120deg,var(--gold),#f5a86e);
+  color:#252037 !important;
+  font-weight:800;
+}
+
+.menu-btn {
+  display:none;
+  border:0;
+  background:none;
+  color:white;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero {
+  padding:100px 0 65px;
+  text-align:center;
+}
+
+.eyebrow {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:9px 17px;
+  border:1px solid rgba(244,200,121,.3);
+  border-radius:30px;
+  color:var(--gold);
+  background:rgba(244,200,121,.07);
+  font-size:.8rem;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.hero h1 {
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(2.7rem,7vw,5rem);
+  line-height:1.12;
+  letter-spacing:-2px;
+  margin:25px auto 18px;
+}
+
+.gradient-text {
+  background:linear-gradient(100deg,var(--gold),var(--pink),var(--purple),var(--blue));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero p {
+  color:var(--muted);
+  max-width:620px;
+  margin:auto;
+  font-size:1.03rem;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+  padding:35px 0 100px;
+}
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:28px;
+  align-items:stretch;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+  padding:35px;
+  border-radius:25px;
+  border:1px solid var(--border);
+  background:
+    radial-gradient(circle at 100% 0,rgba(173,145,255,.2),transparent 40%),
+    linear-gradient(145deg,#292b4b,#22243e);
+}
+
+.contact-info h2 {
+  font-family:'Manrope',sans-serif;
+  font-size:1.8rem;
+  line-height:1.3;
+  margin-bottom:13px;
+}
+
+.contact-info > p {
+  color:var(--muted);
+  font-size:.93rem;
+  margin-bottom:35px;
+}
+
+.contact-method {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:17px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.contact-icon {
+  width:48px;
+  height:48px;
+  border-radius:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.15rem;
+  flex-shrink:0;
+}
+
+.icon-gold {
+  background:rgba(244,200,121,.13);
+  color:var(--gold);
+}
+
+.icon-purple {
+  background:rgba(173,145,255,.13);
+  color:var(--purple);
+}
+
+.icon-blue {
+  background:rgba(121,192,255,.13);
+  color:var(--blue);
+}
+
+.icon-pink {
+  background:rgba(243,155,201,.13);
+  color:var(--pink);
+}
+
+.contact-method small {
+  display:block;
+  color:var(--muted);
+  font-size:.76rem;
+  margin-bottom:3px;
+}
+
+.contact-method strong {
+  font-size:.9rem;
+  overflow-wrap:anywhere;
+}
+
+.contact-method a {
+  transition:.3s;
+}
+
+.contact-method a:hover {
+  color:var(--gold);
+}
+
+.availability {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:28px;
+  color:#b9e8c9;
+  font-size:.84rem;
+}
+
+.status-dot {
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#62d99a;
+  box-shadow:0 0 12px rgba(98,217,154,.6);
+}
+
+/* FORM */
+
+.contact-form {
+  padding:38px;
+  border-radius:25px;
+  border:1px solid var(--border);
+  background:rgba(43,46,75,.72);
+  box-shadow:0 20px 60px rgba(0,0,0,.12);
+}
+
+.form-heading {
+  margin-bottom:25px;
+}
+
+.form-heading h2 {
+  font-family:'Manrope',sans-serif;
+  font-size:1.7rem;
+  margin-bottom:5px;
+}
+
+.form-heading p {
+  color:var(--muted);
+  font-size:.88rem;
+}
+
+.form-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+
+.form-group {
+  margin-bottom:19px;
+}
+
+.form-group label {
+  display:block;
+  font-size:.83rem;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width:100%;
+  padding:14px 15px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  outline:none;
+  background:rgba(255,255,255,.045);
+  color:white;
+  font-family:inherit;
+  font-size:.9rem;
+  transition:.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color:#9293ad;
+}
+
+.form-group select option {
+  background:#252640;
+  color:white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(244,200,121,.09);
+}
+
+.form-group textarea {
+  min-height:135px;
+  resize:vertical;
+}
+
+.submit-btn {
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:12px;
+  background:linear-gradient(110deg,var(--gold),#f4a975);
+  color:#252037;
+  font-family:inherit;
+  font-size:.95rem;
+  font-weight:800;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.submit-btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(244,200,121,.18);
+}
+
+.submit-btn i {
+  margin-left:8px;
+}
+
+.form-note {
+  text-align:center;
+  color:var(--muted);
+  font-size:.75rem;
+  margin-top:13px;
+}
+
+/* WHATSAPP BANNER */
+
+.bottom-banner {
+  padding:55px 25px;
+  margin-bottom:90px;
+  border-radius:25px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(244,200,121,.2),transparent 35%),
+    linear-gradient(120deg,#34345c,#493b70,#354d71);
+  border:1px solid rgba(255,255,255,.13);
+}
+
+.bottom-banner h2 {
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(1.6rem,4vw,2.5rem);
+  margin-bottom:10px;
+}
+
+.bottom-banner p {
+  color:#e0dced;
+  margin-bottom:23px;
+}
+
+.whatsapp-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 23px;
+  border-radius:30px;
+  background:#25d366;
+  color:#10251a;
+  font-weight:800;
+  transition:.3s;
+}
+
+.whatsapp-btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(37,211,102,.2);
+}
+
+/* FOOTER */
+
+footer {
+  border-top:1px solid var(--border);
+  padding:30px 0;
+}
+
+.footer-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.footer-inner p {
+  color:var(--muted);
+  font-size:.82rem;
+}
+
+.signature {
+  color:var(--gold) !important;
+  font-weight:800;
+}
+
+.socials {
+  display:flex;
+  gap:16px;
+}
+
+.socials a {
+  color:var(--muted);
+  transition:.3s;
+}
+
+.socials a:hover {
+  color:var(--gold);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+  .contact-grid {
+    grid-template-columns:1fr;
+  }
+
+  .contact-info {
+    padding:28px;
+  }
+}
+
+@media(max-width:800px) {
+  .menu-btn {
+    display:block;
+  }
+
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:76px;
+    left:0;
+    width:100%;
+    padding:25px 5%;
+    background:#20213b;
+    border-bottom:1px solid var(--border);
+    flex-direction:column;
+    align-items:stretch;
+    gap:18px;
+  }
+
+  .nav-links.show {
+    display:flex;
+  }
+
+  .nav-cta {
+    text-align:center;
+  }
+
+  .hero {
+    padding:75px 0 50px;
+  }
+
+  .footer-inner {
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+@media(max-width:520px) {
+  .contact-form {
+    padding:24px 19px;
+  }
+
+  .form-row {
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .contact-info h2 {
+    font-size:1.55rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="container nav-inner">
+
+    <a href="../index.html" class="logo">
+      NEXORA<span>.</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active nav-cta">Let's Talk</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+  <div class="container">
+
+    <span class="eyebrow">
+      <i class="fas fa-paper-plane"></i>
+      Get In Touch
+    </span>
+
+    <h1>
+      Let's create<br>
+      <span class="gradient-text">something remarkable.</span>
+    </h1>
+
+    <p>
+      Have a project, an idea or a question?
+      I'd love to hear about it. Send a message and
+      let's start a conversation.
+    </p>
+
+  </div>
+</header>
+
+<!-- CONTACT CONTENT -->
+
+<main>
+
+<section class="contact-section">
+  <div class="container contact-grid">
+
+    <!-- CONTACT INFORMATION -->
+
+    <div class="contact-info">
+
+      <h2>Let's talk about your next big idea.</h2>
+
+      <p>
+        Whether you're planning a website, exploring a creative idea
+        or simply want to connect, you're welcome here.
+      </p>
+
+      <!-- PHONE -->
+
+      <div class="contact-method">
+        <div class="contact-icon icon-gold">
+          <i class="fas fa-phone"></i>
+        </div>
+
+        <div>
+          <small>Phone / WhatsApp</small>
+          <strong>
+            <a href="https://wa.me/2348163254986" target="_blank" rel="noopener noreferrer">
+              +234 816 325 4986
+            </a>
+          </strong>
+        </div>
+      </div>
+
+      <!-- EMAIL -->
+
+      <div class="contact-method">
+        <div class="contact-icon icon-pink">
+          <i class="fas fa-envelope"></i>
+        </div>
+
+        <div>
+          <small>Email Address</small>
+          <strong>
+            <a href="mailto:sunusimuhammadabdulbaki@gmail.com">
+              sunusimuhammadabdulbaki@gmail.com
+            </a>
+          </strong>
+        </div>
+      </div>
+
+      <!-- GITHUB -->
+
+      <div class="contact-method">
+        <div class="contact-icon icon-purple">
+          <i class="fab fa-github"></i>
+        </div>
+
+        <div>
+          <small>GitHub</small>
+          <strong>
+            <a href="https://github.com/itsmuhd" target="_blank" rel="noopener noreferrer">
+              github.com/itsmuhd
+            </a>
+          </strong>
+        </div>
+      </div>
+
+      <!-- STUDIO -->
+
+      <div class="contact-method">
+        <div class="contact-icon icon-blue">
+          <i class="fas fa-globe"></i>
+        </div>
+
+        <div>
+          <small>Studio</small>
+          <strong>NEXORA STUDIO</strong>
+        </div>
+      </div>
+
+      <div class="availability">
+        <span class="status-dot"></span>
+        Open to meaningful conversations
+      </div>
+
+    </div>
+
+    <!-- CONTACT FORM -->
+
+    <div class="contact-form">
+
+      <div class="form-heading">
+        <h2>Send a message</h2>
+        <p>Fill in the details below to get started.</p>
+      </div>
+
+      <form id="contactForm">
+
+        <div class="form-row">
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              required
+            >
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="subject">What is this about?</label>
+
+          <select id="subject" required>
+            <option value="">Select a topic</option>
+            <option>Website Development</option>
+            <option>Website Design</option>
+            <option>Project Collaboration</option>
+            <option>General Enquiry</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+
+          <textarea
+            id="message"
+            placeholder="Tell me a little about your idea..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Send Message
+          <i class="fas fa-arrow-right"></i>
+        </button>
+
+        <p class="form-note">
+          Your message will open in WhatsApp for you to send.
+        </p>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- WHATSAPP BANNER -->
+
+<section class="container">
+  <div class="bottom-banner">
+
+    <h2>Prefer a direct conversation?</h2>
+
+    <p>
+      Reach out through WhatsApp and let's discuss your idea.
+    </p>
+
+    <a
+      href="https://wa.me/2348163254986?text=Hello%20NEXORA%20STUDIO"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-btn"
+    >
+      <i class="fab fa-whatsapp"></i>
+      Chat on WhatsApp
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container footer-inner">
+
+    <p>
+      © <span id="year"></span> NEXORA STUDIO. All rights reserved.
+    </p>
+
+    <p class="signature">
+      It's Muh'd 👑🖥️
+    </p>
+
+    <div class="socials">
+      <a href="https://github.com/itsmuhd" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="mailto:sunusimuhammadabdulbaki@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+
+  const icon = menuBtn.querySelector('i');
+
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-xmark');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+
+    const icon = menuBtn.querySelector('i');
+
+    icon.classList.add('fa-bars');
+    icon.classList.remove('fa-xmark');
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* CONTACT FORM */
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !email || !subject || !message) {
+    alert('Please complete all fields.');
+    return;
+  }
+
+  const phoneNumber = '2348163254986';
+
+  const text =
+    "Hello NEXORA STUDIO!\n\n" +
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Subject: " + subject + "\n\n" +
+    "Message:\n" + message;
+
+  const whatsappURL =
+    "https://wa.me/" + phoneNumber +
+    "?text=" + encodeURIComponent(text);
+
+  window.open(whatsappURL, '_blank');
+});
+</script>
+
+</body>
+</html>

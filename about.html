@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Muh'd | NEXORA STUDIO</title>
+<meta name="description" content="Discover Muh'd, the developer behind NEXORA STUDIO.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+    --navy: #171a35;
+    --purple: #8060cf;
+    --gold: #e9bd76;
+    --blue: #68b5ed;
+    --white: #ffffff;
+    --muted: #b9bbcf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 88%);
+    margin: auto;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    filter: blur(160px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::before {
+    background: #8060cf;
+    opacity: .17;
+    top: 100px;
+    left: -180px;
+}
+
+body::after {
+    background: #e9bd76;
+    opacity: .10;
+    bottom: 0;
+    right: -180px;
+}
+
+/* NAVIGATION */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(23,26,53,.94);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span,
+.footer-brand span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: linear-gradient(110deg, #e9bd76, #c998e9);
+    color: #171a35;
+    box-shadow: 0 10px 30px rgba(201,152,233,.17);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(201,152,233,.28);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.2);
+    color: white;
+}
+
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+    padding: 115px 0 90px;
+    text-align: center;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    background: rgba(233,189,118,.09);
+    border: 1px solid rgba(233,189,118,.3);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(39px, 7vw, 76px);
+    font-weight: 800;
+    line-height: 1.13;
+    margin: 30px auto 22px;
+    max-width: 900px;
+    letter-spacing: -2px;
+}
+
+.gradient {
+    background: linear-gradient(100deg, #f0c879, #bd8bff, #73baff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    color: var(--muted);
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* STORY */
+
+.story {
+    padding: 75px 0 105px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+/* PERSONAL PHOTO */
+
+.profile-art {
+    min-height: 490px;
+    padding: 13px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(140deg, #bd8bff, #e9bd76, #68b5ed);
+    box-shadow: 0 25px 75px rgba(0,0,0,.3);
+    isolation: isolate;
+}
+
+.profile-art::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,.3), transparent 35%);
+    z-index: -1;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 464px;
+    display: block;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 21px;
+    background: #252847;
+}
+
+.photo-caption {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    padding: 17px 20px;
+    border-radius: 15px;
+    background: rgba(23,26,53,.78);
+    border: 1px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.photo-caption strong {
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+}
+
+.photo-caption span {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.story-copy h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.25;
+    margin: 18px 0;
+}
+
+.story-copy p {
+    color: var(--muted);
+    line-height: 1.95;
+    margin-bottom: 17px;
+    font-size: 15px;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(30px, 5vw, 45px);
+    margin: 16px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+/* PHILOSOPHY */
+
+.philosophy {
+    padding: 95px 0;
+    background: rgba(255,255,255,.025);
+    border-top: 1px solid rgba(255,255,255,.06);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    padding: 32px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025));
+    border: 1px solid rgba(255,255,255,.1);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(233,189,118,.5);
+}
+
+.card-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    font-size: 23px;
+    background: linear-gradient(135deg, #8060cf, #bd8bff);
+    margin-bottom: 25px;
+}
+
+.card:nth-child(2) .card-icon {
+    background: linear-gradient(135deg, #bd8b63, #e9bd76);
+}
+
+.card:nth-child(3) .card-icon {
+    background: linear-gradient(135deg, #397fc2, #73baff);
+}
+
+.card h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+
+.card p {
+    color: var(--muted);
+    line-height: 1.85;
+    font-size: 14px;
+}
+
+/* WHAT I DO */
+
+.what-i-do {
+    padding: 100px 0;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.work-item {
+    padding: 28px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.045);
+    border: 1px solid rgba(255,255,255,.09);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.work-item i {
+    font-size: 25px;
+    color: var(--gold);
+    margin-top: 4px;
+}
+
+.work-item h3 {
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 9px;
+    font-size: 18px;
+}
+
+.work-item p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* GOALS */
+
+.goals {
+    padding: 85px 0;
+    text-align: center;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(189,139,255,.2), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(233,189,118,.15), transparent 40%),
+        #252847;
+}
+
+.goals h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(30px, 5vw, 47px);
+    margin: 18px 0;
+}
+
+.goals p {
+    max-width: 650px;
+    margin: auto;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+/* CONTACT */
+
+.contact-cta {
+    padding: 95px 0;
+    text-align: center;
+}
+
+.contact-box {
+    padding: 65px 25px;
+    border-radius: 28px;
+    background: linear-gradient(120deg, #37335d, #333b61);
+    border: 1px solid rgba(255,255,255,.13);
+}
+
+.contact-box h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(30px, 5vw, 45px);
+    margin: 18px 0;
+}
+
+.contact-box p {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 550px;
+    margin: 0 auto 28px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 45px 0 25px;
+    background: rgba(0,0,0,.15);
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 28px;
+}
+
+.footer-brand {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 23px;
+}
+
+.footer-top p,
+.footer-bottom {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.footer-bottom {
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.signature {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* MOBILE */
+
+@media(max-width: 850px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .profile-art {
+        max-width: 520px;
+        width: 100%;
+        margin: auto;
+        min-height: auto;
+    }
+
+    .profile-photo {
+        height: 470px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 700px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        padding: 25px 6%;
+        background: #202342;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 85px 0 65px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .story,
+    .what-i-do {
+        padding: 70px 0;
+    }
+
+    .profile-photo {
+        height: 390px;
+    }
+
+    .photo-caption {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 380px) {
+    .profile-photo {
+        height: 330px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    *, *::before, *::after {
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+
+        <a href="../index.html" class="logo">
+            NEXORA<span>STUDIO</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="../index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+
+            <span class="tag">
+                <i class="fas fa-sparkles"></i>
+                THE PERSON BEHIND THE CREATION
+            </span>
+
+            <h1>
+                Every Great Idea<br>
+                Begins With a <span class="gradient">Vision.</span>
+            </h1>
+
+            <p>
+                I'm Muh'd, a Full-Stack Developer passionate about
+                technology, creativity and building meaningful
+                digital experiences.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#my-story" class="btn btn-primary">
+                    Discover My Story <i class="fas fa-arrow-down"></i>
+                </a>
+
+                <a href="projects.html" class="btn btn-outline">
+                    Explore Projects
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MY STORY WITH PERSONAL PHOTOGRAPH -->
+
+    <section class="story" id="my-story">
+        <div class="container story-grid">
+
+            <div class="profile-art">
+
+                <img
+                    src="../assets/muhd.jpg"
+                    alt="Portrait of Muh'd, founder of NEXORA STUDIO"
+                    class="profile-photo"
+                    loading="eager"
+                >
+
+                <div class="photo-caption">
+                    <strong>Muh'd</strong>
+                    <span>FULL-STACK DEVELOPER</span>
+                </div>
+
+            </div>
+
+            <div class="story-copy">
+
+                <span class="section-label">MY STORY</span>
+
+                <h2>
+                    Meet the Mind Behind
+                    <span class="gradient">NEXORA STUDIO.</span>
+                </h2>
+
+                <p>
+                    My name is Muh'd. I'm a Full-Stack Developer
+                    interested in the endless possibilities of technology.
+                </p>
+
+                <p>
+                    I enjoy exploring ideas, learning new technologies
+                    and developing websites that combine attractive
+                    design with useful functionality.
+                </p>
+
+                <p>
+                    NEXORA STUDIO is my creative space — a place where
+                    I bring ideas to life, experiment with digital
+                    experiences and continuously improve my craft.
+                </p>
+
+                <a href="projects.html" class="btn btn-primary">
+                    View My Work <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+
+    <section class="philosophy">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">MY PHILOSOPHY</span>
+                <h2>What Drives <span class="gradient">My Work?</span></h2>
+                <p>
+                    Every project is an opportunity to think differently,
+                    create something meaningful and become better.
+                </p>
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Creativity</h3>
+                    <p>
+                        I enjoy transforming ideas into original
+                        concepts and exploring creative digital solutions.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Quality</h3>
+                    <p>
+                        I value clean design, thoughtful details,
+                        usability and consistency in digital products.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Growth</h3>
+                    <p>
+                        I believe in continuous learning, experimenting
+                        and improving with every new challenge.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHAT I DO -->
+
+    <section class="what-i-do">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-label">MY CREATIVE INTERESTS</span>
+                <h2>What I <span class="gradient">Do.</span></h2>
+                <p>
+                    Areas of technology and development that inspire
+                    my creative journey.
+                </p>
+            </div>
+
+            <div class="work-grid">
+
+                <article class="work-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <div>
+                        <h3>Web Development</h3>
+                        <p>
+                            Exploring how to build responsive,
+                            functional and engaging websites.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="work-item">
+                    <i class="fas fa-palette"></i>
+                    <div>
+                        <h3>Creative Design</h3>
+                        <p>
+                            Creating attractive layouts with
+                            thoughtful colours, typography and structure.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="work-item">
+                    <i class="fas fa-brain"></i>
+                    <div>
+                        <h3>Digital Innovation</h3>
+                        <p>
+                            Exploring new technologies and discovering
+                            better ways to solve digital problems.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="work-item">
+                    <i class="fas fa-code-branch"></i>
+                    <div>
+                        <h3>Continuous Learning</h3>
+                        <p>
+                            Developing my knowledge through practice,
+                            experimentation and new challenges.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GOALS -->
+
+    <section class="goals">
+        <div class="container">
+
+            <span class="section-label">THE BIGGER PICTURE</span>
+
+            <h2>
+                Always Creating.<br>
+                Always <span class="gradient">Evolving.</span>
+            </h2>
+
+            <p>
+                My goal is to keep growing as a developer,
+                explore innovative technologies and create
+                digital experiences that make a meaningful difference.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact-cta">
+        <div class="container">
+
+            <div class="contact-box">
+
+                <span class="section-label">LET'S CONNECT</span>
+
+                <h2>
+                    Have an Idea?<br>
+                    Let's Make It <span class="gradient">Real.</span>
+                </h2>
+
+                <p>
+                    Have a project or a creative idea?
+                    I'd love to explore what's possible.
+                </p>
+
+                <a href="contact.html" class="btn btn-primary">
+                    Contact Me <i class="fas fa-paper-plane"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+
+        <div class="footer-top">
+            <div>
+                <div class="footer-brand">
+                    NEXORA<span>STUDIO</span>
+                </div>
+                <p>Ideas transformed into digital experiences.</p>
+            </div>
+
+            <a href="../index.html" class="btn btn-outline">
+                Back to Home <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> NEXORA STUDIO. All rights reserved.</p>
+            <p>Created by <span class="signature">It's Muh'd 👑🖥️</span></p>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+    navLinks.classList.toggle("open");
+
+    const icon = menuToggle.querySelector("i");
+
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-xmark");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+
+        const icon = menuToggle.querySelector("i");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-xmark");
+    });
+});
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
