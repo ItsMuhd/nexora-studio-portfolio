@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="theme-color" content="#15172b">
-    <meta name="description" content="Muh'd — Full-Stack Developer, creative technologist and digital creator. Welcome to NEXORA STUDIO.">
+    <meta name="description" content="NEXORA STUDIO — Creative digital experiences, modern websites and innovative solutions.">
 
-    <title>NEXORA STUDIO | Muh'd — Full-Stack Developer</title>
+    <title>NEXORA STUDIO | Digital Creativity</title>
 
-    <!-- PREMIUM TYPOGRAPHY -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Correct root-level stylesheet path -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -27,43 +21,35 @@
     <!-- LOADING SCREEN -->
     <div class="loader" id="loader">
         <div class="loader-content">
-            <div class="loader-symbol">N.</div>
-            <h2>NEXORA STUDIO</h2>
-            <div class="loader-line"></div>
-            <p>CREATING DIGITAL EXCELLENCE</p>
+            <h2>NEXORA <span>STUDIO</span></h2>
+            <p>Preparing your experience...</p>
         </div>
-    </div>
-
-    <!-- BACKGROUND DECORATIONS -->
-    <div class="background-effects">
-        <div class="glow glow-one"></div>
-        <div class="glow glow-two"></div>
-        <div class="glow glow-three"></div>
-        <div class="grid-overlay"></div>
     </div>
 
     <!-- NAVIGATION -->
     <header class="navbar" id="navbar">
-        <div class="nav-container">
+        <div class="container nav-container">
 
-            <a href="index.html" class="logo">
-                NEXORA<span>.</span>
+            <a href="./index.html" class="logo">
+                NEXORA<span>STUDIO.</span>
             </a>
 
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html" class="active">Home</a>
-                <a href="pages/about.html">About</a>
-                <a href="pages/services.html">Services</a>
-                <a href="pages/projects.html">Projects</a>
-
-                <a href="pages/contact.html" class="nav-contact">
-                    Let's Talk <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </nav>
-
-            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
-                <i class="fa-solid fa-bars"></i>
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="./index.html" class="nav-link active">Home</a>
+                <a href="./about.html" class="nav-link">About</a>
+                <a href="./services.html" class="nav-link">Services</a>
+                <a href="./projects.html" class="nav-link">Projects</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
+            </nav>
 
         </div>
     </header>
@@ -72,534 +58,308 @@
     <main>
 
         <section class="hero" id="home">
-
-            <div class="hero-container">
+            <div class="container hero-container">
 
                 <div class="hero-content reveal">
 
-                    <div class="availability">
-                        <span class="status-dot"></span>
-                        AVAILABLE FOR CREATIVE PROJECTS
-                    </div>
-
-                    <p class="hero-intro">
-                        HELLO, WELCOME TO MY DIGITAL SPACE
-                    </p>
+                    <span class="hero-tag">
+                        ✦ WELCOME TO NEXORA STUDIO
+                    </span>
 
                     <h1>
-                        Building<br>
-                        <span>Digital</span> Dreams<br>
-                        Into Reality.
+                        We Create
+                        <span>Digital Experiences</span>
+                        That Stand Out.
                     </h1>
 
-                    <p class="hero-description">
-                        I'm Muh'd, a Full-Stack Developer passionate about
-                        creating beautiful, functional and meaningful digital
-                        experiences through technology and creativity.
+                    <p>
+                        We transform creative ideas into beautiful digital
+                        experiences through modern website design, innovative
+                        technology and powerful creativity.
                     </p>
 
                     <div class="hero-buttons">
-
-                        <a href="pages/projects.html" class="btn btn-primary">
-                            Explore My Work
-                            <i class="fa-solid fa-arrow-right"></i>
+                        <a href="./projects.html" class="btn btn-primary">
+                            Explore Projects ↗
                         </a>
 
-                        <a href="pages/contact.html" class="btn btn-secondary">
-                            Let's Connect
-                            <i class="fa-regular fa-paper-plane"></i>
+                        <a href="./contact.html" class="btn btn-outline">
+                            Let's Talk
                         </a>
-
                     </div>
 
-                    <div class="hero-signature">
-                        <span class="signature-line"></span>
-                        <p>CREATIVITY MEETS TECHNOLOGY</p>
+                    <div class="hero-stats">
+                        <div>
+                            <h3>Creative</h3>
+                            <p>Digital Thinking</p>
+                        </div>
+
+                        <div>
+                            <h3>Modern</h3>
+                            <p>Web Experiences</p>
+                        </div>
+
+                        <div>
+                            <h3>Unique</h3>
+                            <p>Design Approach</p>
+                        </div>
                     </div>
 
                 </div>
 
-                <!-- RIGHT VISUAL -->
+                <!-- HERO VISUAL -->
                 <div class="hero-visual reveal">
 
-                    <div class="visual-glow"></div>
+                    <div class="hero-glow"></div>
 
-                    <div class="visual-card">
-
+                    <div class="floating-card">
                         <div class="card-top">
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                            <span class="card-dot"></span>
-                            <p>MY DIGITAL UNIVERSE</p>
+                            <span>✦ NEXORA CREATIVE</span>
+                            <span>01 / 04</span>
                         </div>
 
-                        <div class="visual-center">
-
-                            <div class="outer-ring"></div>
-                            <div class="middle-ring"></div>
-                            <div class="inner-ring"></div>
-
-                            <div class="central-logo">
-                                <span>N</span>
+                        <div class="hero-card-content">
+                            <div class="hero-orbit">
+                                <div class="orbit-circle orbit-one"></div>
+                                <div class="orbit-circle orbit-two"></div>
+                                <div class="orbit-center">N</div>
                             </div>
 
-                            <div class="floating-icon icon-one">
-                                <i class="fa-solid fa-code"></i>
-                            </div>
+                            <h2>Beyond<br>Ordinary.</h2>
 
-                            <div class="floating-icon icon-two">
-                                <i class="fa-solid fa-lightbulb"></i>
-                            </div>
-
-                            <div class="floating-icon icon-three">
-                                <i class="fa-solid fa-cube"></i>
-                            </div>
-
-                            <div class="floating-icon icon-four">
-                                <i class="fa-solid fa-laptop-code"></i>
-                            </div>
-
+                            <p>
+                                Creativity meets technology.
+                            </p>
                         </div>
 
                         <div class="card-bottom">
-                            <div>
-                                <span>CREATIVE MIND</span>
-                                <h3>MUH'D.</h3>
-                            </div>
-
-                            <div class="card-number">
-                                001
-                            </div>
+                            <span>DESIGN • DEVELOPMENT • INNOVATION</span>
                         </div>
-
                     </div>
 
                     <div class="floating-label label-one">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        Creative Design
+                        ✦ Creative Design
                     </div>
 
                     <div class="floating-label label-two">
-                        <i class="fa-solid fa-code"></i>
-                        Smart Development
+                        ⚡ Innovation
+                    </div>
+
+                    <div class="floating-label label-three">
+                        ◈ Technology
                     </div>
 
                 </div>
 
             </div>
-
-            <div class="hero-scroll">
-                <span>SCROLL TO EXPLORE</span>
-                <i class="fa-solid fa-arrow-down"></i>
-            </div>
-
         </section>
 
-        <!-- INTRODUCTION -->
-        <section class="intro-section">
-
+        <!-- ABOUT PREVIEW -->
+        <section class="about-preview section-padding" id="about">
             <div class="container">
 
                 <div class="section-heading reveal">
-
-                    <span class="section-tag">01 — INTRODUCTION</span>
-
-                    <h2>
-                        Beyond Ordinary.<br>
-                        <span>Designed With Purpose.</span>
-                    </h2>
-
+                    <span class="section-tag">WHO WE ARE</span>
+                    <h2>Creativity With <span>Purpose.</span></h2>
                     <p>
-                        Technology is more than writing code.
-                        It's about transforming ideas into experiences
-                        that inspire, connect and make a difference.
+                        We believe every great digital experience starts
+                        with a powerful idea.
                     </p>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-card reveal">
+                        <div class="about-icon">✦</div>
+                        <h3>Our Creativity</h3>
+                        <p>
+                            We approach every project with fresh ideas,
+                            thoughtful design and attention to detail.
+                        </p>
+                    </div>
+
+                    <div class="about-card reveal">
+                        <div class="about-icon">◈</div>
+                        <h3>Our Technology</h3>
+                        <p>
+                            We use modern web technologies to create
+                            responsive and functional digital experiences.
+                        </p>
+                    </div>
+
+                    <div class="about-card reveal">
+                        <div class="about-icon">⚡</div>
+                        <h3>Our Vision</h3>
+                        <p>
+                            Our vision is to make digital experiences
+                            more engaging, accessible and memorable.
+                        </p>
+                    </div>
 
                 </div>
 
-                <div class="intro-content reveal">
-
-                    <div class="intro-box">
-
-                        <div class="intro-icon">
-                            <i class="fa-solid fa-gem"></i>
-                        </div>
-
-                        <h3>My Creative Philosophy</h3>
-
-                        <p>
-                            Every project deserves thoughtful design,
-                            attention to detail and a commitment to
-                            delivering an excellent digital experience.
-                        </p>
-
-                    </div>
-
-                    <div class="intro-box">
-
-                        <div class="intro-icon purple-icon">
-                            <i class="fa-solid fa-rocket"></i>
-                        </div>
-
-                        <h3>My Digital Vision</h3>
-
-                        <p>
-                            Exploring new possibilities through modern
-                            technology, creative problem-solving and
-                            continuous learning.
-                        </p>
-
-                    </div>
-
-                    <div class="intro-box">
-
-                        <div class="intro-icon blue-icon">
-                            <i class="fa-solid fa-layer-group"></i>
-                        </div>
-
-                        <h3>My Approach</h3>
-
-                        <p>
-                            Combining functionality, aesthetics and
-                            simplicity to create digital products
-                            that feel professional and intuitive.
-                        </p>
-
-                    </div>
-
+                <div class="center-button">
+                    <a href="./about.html" class="btn btn-outline">
+                        Discover More ↗
+                    </a>
                 </div>
 
             </div>
-
         </section>
 
         <!-- SERVICES PREVIEW -->
-        <section class="services-preview">
-
+        <section class="services-preview section-padding">
             <div class="container">
 
                 <div class="section-heading reveal">
-
-                    <span class="section-tag">02 — WHAT I DO</span>
-
-                    <h2>
-                        Creativity With<br>
-                        <span>Technical Precision.</span>
-                    </h2>
-
+                    <span class="section-tag">WHAT WE DO</span>
+                    <h2>Our Creative <span>Services.</span></h2>
                     <p>
-                        Exploring digital solutions through development,
-                        design and innovative technology.
+                        Digital solutions designed to bring ideas to life.
                     </p>
-
                 </div>
 
                 <div class="services-grid">
 
                     <div class="service-card reveal">
-
-                        <div class="service-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-
-                        <h3>Web Development</h3>
-
-                        <p>
-                            Building responsive and functional websites
-                            with modern web technologies.
-                        </p>
-
                         <span class="service-number">01</span>
-
+                        <div class="service-icon">✧</div>
+                        <h3>Web Design</h3>
+                        <p>
+                            Beautiful, modern and user-friendly website
+                            interfaces built around your brand.
+                        </p>
                     </div>
 
                     <div class="service-card reveal">
-
-                        <div class="service-icon purple-icon">
-                            <i class="fa-solid fa-pen-ruler"></i>
-                        </div>
-
-                        <h3>Creative Design</h3>
-
-                        <p>
-                            Exploring clean layouts, beautiful visuals
-                            and engaging digital interfaces.
-                        </p>
-
                         <span class="service-number">02</span>
-
+                        <div class="service-icon">⌘</div>
+                        <h3>Web Development</h3>
+                        <p>
+                            Responsive websites with functional features
+                            and modern development practices.
+                        </p>
                     </div>
 
                     <div class="service-card reveal">
-
-                        <div class="service-icon blue-icon">
-                            <i class="fa-solid fa-brain"></i>
-                        </div>
-
-                        <h3>Digital Innovation</h3>
-
-                        <p>
-                            Experimenting with technology and creative
-                            ideas to develop useful digital solutions.
-                        </p>
-
                         <span class="service-number">03</span>
-
+                        <div class="service-icon">◉</div>
+                        <h3>Digital Solutions</h3>
+                        <p>
+                            Creative digital solutions that help turn
+                            concepts into useful experiences.
+                        </p>
                     </div>
 
                 </div>
 
-                <div class="center-button reveal">
-
-                    <a href="pages/services.html" class="btn btn-outline">
-                        Discover My Services
-                        <i class="fa-solid fa-arrow-right"></i>
+                <div class="center-button">
+                    <a href="./services.html" class="btn btn-primary">
+                        View All Services ↗
                     </a>
-
                 </div>
 
             </div>
-
         </section>
 
         <!-- PROJECTS PREVIEW -->
-        <section class="featured-projects">
-
+        <section class="projects-preview section-padding">
             <div class="container">
 
                 <div class="section-heading reveal">
-
-                    <span class="section-tag">03 — SELECTED WORK</span>
-
-                    <h2>
-                        Ideas Into<br>
-                        <span>Digital Experiences.</span>
-                    </h2>
-
+                    <span class="section-tag">OUR WORK</span>
+                    <h2>Ideas Into <span>Reality.</span></h2>
                     <p>
-                        A selection of projects, experiments and
-                        creative digital work.
+                        A showcase of creativity, design and digital innovation.
                     </p>
-
                 </div>
 
-                <div class="projects-grid">
-
-                    <!-- PROJECT 01: FUTURE PILOT ACADEMY -->
-                    <article class="project-card reveal">
-
-                        <div class="project-image project-one">
-
-                            <div class="project-placeholder">
-                                <i class="fa-solid fa-plane"></i>
-                                <h3>FUTURE PILOT</h3>
-                            </div>
-
+                <div class="project-showcase reveal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <span>CREATIVE PORTFOLIO</span>
+                            <h3>Building Digital Experiences</h3>
                         </div>
-
-                        <div class="project-info">
-
-                            <span class="project-category">
-                                WEB DEVELOPMENT
-                            </span>
-
-                            <h3>Future Pilot Academy</h3>
-
-                            <p>
-                                An educational website project focused
-                                on aviation learning and digital presentation.
-                            </p>
-
-                            <a href="pages/projects.html" class="project-link">
-                                Explore Project
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                    <!-- PROJECT 02: OSTIN REAL PRINTING PRESS -->
-                    <article class="project-card reveal">
-
-                        <div class="project-image project-two">
-
-                            <div class="project-placeholder">
-                                <i class="fa-solid fa-print"></i>
-                                <h3>OSTIN PRINTING PRESS</h3>
-                            </div>
-
-                        </div>
-
-                        <div class="project-info">
-
-                            <span class="project-category">
-                                BUSINESS WEBSITE
-                            </span>
-
-                            <h3>OSTIN REAL PRINTING PRESS</h3>
-
-                            <p>
-                                A dedicated website project for OSTIN REAL
-                                PRINTING PRESS, presenting its brand through
-                                a custom digital experience.
-                            </p>
-
-                            <a
-                                href="https://itsmuhd.github.io/ostin-real-printing-press/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-link"
-                            >
-                                Visit Live Website
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                    <!-- PROJECT 03: DIGITAL EXPERIMENTS -->
-                    <article class="project-card reveal">
-
-                        <div class="project-image project-two">
-
-                            <div class="project-placeholder">
-                                <i class="fa-solid fa-lightbulb"></i>
-                                <h3>DIGITAL INNOVATION</h3>
-                            </div>
-
-                        </div>
-
-                        <div class="project-info">
-
-                            <span class="project-category">
-                                CREATIVE TECHNOLOGY
-                            </span>
-
-                            <h3>Digital Experiments</h3>
-
-                            <p>
-                                Creative explorations involving interactive
-                                ideas, digital interfaces and technology.
-                            </p>
-
-                            <a href="pages/projects.html" class="project-link">
-                                Explore Projects
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-                    </article>
-
+                    </div>
                 </div>
 
-                <div class="center-button reveal">
-
-                    <a href="pages/projects.html" class="btn btn-primary">
-                        View All Projects
-                        <i class="fa-solid fa-arrow-right"></i>
+                <div class="center-button">
+                    <a href="./projects.html" class="btn btn-outline">
+                        Explore Our Projects ↗
                     </a>
-
                 </div>
 
             </div>
-
         </section>
 
-        <!-- FINAL CTA -->
-        <section class="cta-section">
-
-            <div class="cta-decoration"></div>
-
+        <!-- CTA -->
+        <section class="cta-section section-padding">
             <div class="container">
 
-                <div class="cta-content reveal">
-
+                <div class="cta-box reveal">
                     <span class="section-tag">LET'S CREATE SOMETHING</span>
 
                     <h2>
-                        Have An Idea?<br>
-                        <span>Let's Bring It To Life.</span>
+                        Have An Idea?
+                        <span>Let's Build It.</span>
                     </h2>
 
                     <p>
-                        Great digital experiences begin with great ideas.
-                        Let's explore what's possible.
+                        Your next digital experience could start with
+                        one conversation.
                     </p>
 
-                    <a href="pages/contact.html" class="btn btn-light">
-                        Start A Conversation
-                        <i class="fa-solid fa-arrow-right"></i>
+                    <a href="./contact.html" class="btn btn-primary">
+                        Get In Touch ↗
                     </a>
-
                 </div>
 
             </div>
-
         </section>
 
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
+        <div class="container footer-container">
 
-        <div class="container">
-
-            <div class="footer-content">
-
-                <div class="footer-brand">
-
-                    <a href="index.html" class="logo">
-                        NEXORA<span>.</span>
-                    </a>
-
-                    <p>
-                        A creative digital space where technology,
-                        imagination and purposeful design meet.
-                    </p>
-
-                </div>
-
-                <div class="footer-links">
-
-                    <h3>EXPLORE</h3>
-
-                    <a href="index.html">Home</a>
-                    <a href="pages/about.html">About</a>
-                    <a href="pages/services.html">Services</a>
-                    <a href="pages/projects.html">Projects</a>
-
-                </div>
-
-                <div class="footer-links">
-
-                    <h3>CONNECT</h3>
-
-                    <a href="pages/contact.html">Contact Me</a>
-                    <a href="pages/projects.html">My Work</a>
-
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
+            <div class="footer-brand">
+                <a href="./index.html" class="logo">
+                    NEXORA<span>STUDIO.</span>
+                </a>
 
                 <p>
-                    © <span id="year"></span> NEXORA STUDIO.
-                    Crafted with creativity by
-                    <span>It's Muh'd 👑🖥️</span>
+                    Creativity, technology and innovation
+                    brought together.
                 </p>
+            </div>
 
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./services.html">Services</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+
+            <div class="footer-credit">
+                <h3>Creator</h3>
+                <p>It's Muh'd 👑🖥️</p>
             </div>
 
         </div>
 
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> NEXORA STUDIO.
+                All Rights Reserved.
+            </p>
+        </div>
     </footer>
 
-    <!-- JAVASCRIPT -->
-    <script src="js/script.js"></script>
+    <!-- Correct root-level JavaScript path -->
+    <script src="./script.js"></script>
 
 </body>
 </html>
